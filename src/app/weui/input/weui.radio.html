@@ -1,0 +1,11 @@
+<label class="weui-check__label" [for]="id" (click)="onTouched()">
+    <div class="weui-cell__bd">
+        {{label}}<ng-content></ng-content>
+    </div>
+    <div class="weui-cell__ft">
+        <input type="radio" class="weui-check"
+               [id]="id" [name]="name" [value]="value" [disabled]="disabled"
+               [(ngModel)]="innerValue">
+        <span class="weui-icon-checked"></span>
+    </div>
+</label>
