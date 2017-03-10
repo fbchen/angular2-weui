@@ -134,7 +134,6 @@ export { WeUITopTips } from './toptips/weui.toptip';
         WeUITabBarItem
     ],
     exports: [
-        WeUIFormControl,
         WeUIButton,
         WeUIInput,
         WeUIRadio,

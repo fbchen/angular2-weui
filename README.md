@@ -26,6 +26,13 @@ cnpm install angular-weui --save
 
 ## Quickstart
 
+直接下载本工程，并启动运行查看Demo：
+```bash
+git clone https://github.com/fbchen/angular2-weui.git
+cd angular2-weui
+cnpm install
+```
+
 下载angular-weui后，通过开发工具[VSCode](http://code.visualstudio.com/Download)打开安装目录，点击调试“启动程序”，然后在浏览器中输入 http://localhost:4200/ 直接预览效果。
 
 ## Usage

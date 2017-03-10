@@ -9,7 +9,7 @@
 
 import { Inject, LOCALE_ID, Pipe, PipeTransform } from '@angular/core';
 import { DatePipe } from '@angular/common';
-import { NumberWrapper, isDate } from '@angular/common/src/facade/lang';
+import { NumberWrapper } from '@angular/common/src/facade/lang';
 import { DateFormatter } from '@angular/common/src/pipes/intl';
 import { InvalidPipeArgumentError } from '@angular/common/src/pipes/invalid_pipe_argument_error';
 
@@ -54,7 +54,7 @@ export class FormatDatePipe implements PipeTransform {
             value = value.trim();
         }
 
-        if (isDate(value)) {
+        if (typeof value['getTime'] !== undefined) {
             date = value;
         } else if (NumberWrapper.isNumeric(value)) {
             date = new Date(parseFloat(value));
@@ -75,11 +75,11 @@ export class FormatDatePipe implements PipeTransform {
             }
         }
 
-        if (date == null) {
+        if (date == null || date == undefined) {
             date = new Date(value);
         }
 
-        if (!isDate(date)) {
+        if (typeof date['getTime'] == undefined) {
             throw new InvalidPipeArgumentError(FormatDatePipe, value);
         }
 
