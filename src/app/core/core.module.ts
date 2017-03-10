@@ -20,8 +20,19 @@ declare module 'rxjs/Observable' {
 }
 Observable.prototype.toResult = toResult;
 
+/**
+ * Export Class
+ */
+export { Page } from './page';
+export { Result } from './result';
 
-
+/**
+ * @name CoreModule
+ * @description
+ * CoreModule is an NgModule that provides Core Components, Directive and Pipes.
+ *
+ * @author fbchen 2017-03-08
+ */
 @NgModule({
     imports: [
         BrowserModule

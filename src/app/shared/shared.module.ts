@@ -17,6 +17,10 @@ import { RangeValidatorDirective } from './directive/range.validator.directive';
 import { PhoneNumberValidatorDirective } from './directive/phone.validator.directive';
 import { URLValidatorDirective } from './directive/url.validator.directive';
 
+export { isPresent, isDate } from './utils/lang';
+export { StringUtils } from './utils/string.utils';
+export { FileUtils } from './utils/file.utils';
+
 /**
  * @name SharedModule
  * @description
