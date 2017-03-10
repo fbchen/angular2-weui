@@ -8,6 +8,8 @@
 
 import { Component, Input, Output, EventEmitter, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
+import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/distinctUntilChanged';
 
 @Component({
     selector: 'weui-searchbar',
