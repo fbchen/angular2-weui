@@ -33,12 +33,12 @@ export class WeUIButton {
     /**
      * 正在加载
      */
-    @Input() loading: boolean = false;
+    @Input() loading = false;
 
     /**
      * 禁用样式
      */
-    @Input() disabled: boolean = false;
+    @Input() disabled = false;
 
     constructor() {
 

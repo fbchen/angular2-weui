@@ -25,7 +25,7 @@ export class WeUITabBarItem {
     /**
      * 设置基本样式
      */
-    @HostBinding('class.weui-tabbar__item') barItemCls: boolean = true;
+    @HostBinding('class.weui-tabbar__item') barItemCls = true;
 
     /**
      * 设置激活样式
@@ -34,7 +34,7 @@ export class WeUITabBarItem {
         return this._activated;
     }
 
-    private _activated: boolean = false; // 用于设置激活样式
+    private _activated = false; // 用于设置激活样式
 
     /**
      * 点击触发激活

@@ -24,7 +24,7 @@ export class WeUINavBarItem {
     /**
      * 设置基本样式
      */
-    @HostBinding('class.weui-navbar__item') barItemCls: boolean = true;
+    @HostBinding('class.weui-navbar__item') barItemCls = true;
 
     /**
      * 设置激活样式
@@ -33,7 +33,7 @@ export class WeUINavBarItem {
         return this._activated;
     }
 
-    private _activated: boolean = false; // 用于设置激活样式
+    private _activated = false; // 用于设置激活样式
 
     /**
      * 点击触发激活

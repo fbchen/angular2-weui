@@ -26,7 +26,7 @@ const WEUI_FORM_CONTROL_VALUE_ACCESSOR: any = {
 export class WeUICheckbox extends WeUIFormControl {
 
     /** @internal */
-    checked: boolean = false;
+    checked = false;
 
     /** @internal */
     values: any[] = [];

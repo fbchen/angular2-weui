@@ -37,7 +37,7 @@ export class WeUILoadmore {
     /**
      * 正在加载
      */
-    @Input() loading: boolean = false;
+    @Input() loading = false;
 
     constructor() {
 

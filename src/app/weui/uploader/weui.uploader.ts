@@ -28,7 +28,7 @@ export class WeUIFile {
     /**
      * 此文件的上传进度
      */
-    progress: number = 0;
+    progress = 0;
 
     /**
      * 错误消息
@@ -38,12 +38,12 @@ export class WeUIFile {
     /**
      * 是否正在上传
      */
-    isUploading: boolean = false;
+    isUploading = false;
 
     /**
      * 是否已经上传
      */
-    isUploaded: boolean = false;
+    isUploaded = false;
 
     /**
      * 是否存在错误

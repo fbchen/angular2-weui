@@ -54,7 +54,7 @@ export class FormatDatePipe implements PipeTransform {
             value = value.trim();
         }
 
-        if (typeof value['getTime'] !== undefined) {
+        if (typeof value['getTime'] !== 'undefined') {
             date = value;
         } else if (NumberWrapper.isNumeric(value)) {
             date = new Date(parseFloat(value));
@@ -75,11 +75,11 @@ export class FormatDatePipe implements PipeTransform {
             }
         }
 
-        if (date == null || date == undefined) {
+        if (date == null || date === undefined) {
             date = new Date(value);
         }
 
-        if (typeof date['getTime'] == undefined) {
+        if (typeof date['getTime'] === 'undefined') {
             throw new InvalidPipeArgumentError(FormatDatePipe, value);
         }
 

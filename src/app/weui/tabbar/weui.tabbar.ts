@@ -19,12 +19,12 @@ export class WeUITabBar implements AfterViewInit {
     /**
      * 初始激活的子对象
      */
-    @Input() activeIndex: number = 0;
+    @Input() activeIndex = 0;
 
     /**
      * 设置基本样式
      */
-    @HostBinding('class.weui-tabbar') barCls: boolean = true;
+    @HostBinding('class.weui-tabbar') barCls = true;
 
     /** @internal */
     @ContentChildren(WeUITabBarItem) items: QueryList<WeUITabBarItem>;

@@ -28,7 +28,7 @@ export class WeUIInput extends WeUIFormControl {
     /**
      * 控件类型：text, number, tel, email, password, date, datetime-local等
      */
-    @Input() type: string = 'text';
+    @Input() type = 'text';
 
     /**
      * pattern 属性规定用于验证输入字段的模式（正则表达式）。<br>
@@ -69,23 +69,23 @@ export class WeUIInput extends WeUIFormControl {
     /**
      * 是否必填
      */
-    @Input() required: boolean = false;
+    @Input() required = false;
 
     /**
      * 是否只读
      */
-    @Input() readonly: boolean = false;
+    @Input() readonly = false;
 
     /**
      * autocomplete 属性规定输入字段是否应该启用自动完成功能。默认为on。<br>
      * 自动完成允许浏览器预测对字段的输入。当用户在字段开始键入时，浏览器基于之前键入过的值，应该显示出在字段中填写的选项。
      */
-    @Input() autocomplete: boolean = true;
+    @Input() autocomplete = true;
 
     /**
      * 是否监听输入长度
      */
-    @Input() countChars: boolean = false;
+    @Input() countChars = false;
 
     /**
      * 样式
@@ -95,12 +95,12 @@ export class WeUIInput extends WeUIFormControl {
     /**
      * 输入域无效时显示告警图标，默认为true
      */
-    @Input() showWarnIcon: boolean = true;
+    @Input() showWarnIcon = true;
 
     /**
      * 行数，当类型是textarea时
      */
-    @Input() rows: number = 3;
+    @Input() rows = 3;
 
     /**
      * @output {event} Expression to call when the input no longer has focus

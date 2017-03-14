@@ -35,7 +35,7 @@ export class WeUIActionSheet {
     /**
      * ActionSheet弹出模式，取值：ios(Ios模式) - 从底部上弹，md(Android模式) - 弹出在窗口中间。默认为ios。
      */
-    @Input() mode: string = 'ios';
+    @Input() mode = 'ios';
 
     /**
      * @i18n 取消
@@ -67,8 +67,8 @@ export class WeUIActionSheet {
      * 已显示否
      * @internal
      */
-    public shown: boolean = false; // (显示时，先_show，然后才shown)
-    public _show: boolean = false; // 解决transition动画与display冲突的问题
+    public shown = false; // (显示时，先_show，然后才shown)
+    public _show = false; // 解决transition动画与display冲突的问题
 
     /* @internal */
     private resolve: (value?: any) => void;

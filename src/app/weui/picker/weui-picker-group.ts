@@ -56,7 +56,7 @@ export class WeUIPickerGroup implements OnInit {
     /**
      * 选项滚动的距离，用于设置translate3d的Y值
      */
-    private distance: number = 0;
+    private distance = 0;
 
     public get translate3d(): string {
         return `translate3d(0, ${this.distance}px, 0)`;
@@ -65,7 +65,7 @@ export class WeUIPickerGroup implements OnInit {
     /**
      * 选项惯性滚动的时间
      */
-    private duration: number = 0; // ms
+    private duration = 0; // ms
     public get transition(): string {
         return `all ${this.duration}ms`;
     }
@@ -122,10 +122,10 @@ export class WeUIPickerGroup implements OnInit {
          */
         const _speed = Math.abs(this.speed);
         if (_speed >= 5) {
-            const windowY: number = getWindowHeight() - (this.defaults.bodyHeight / 2);
+            const windowY = getWindowHeight() - (this.defaults.bodyHeight / 2);
             this.stop(windowY - this.endY);
         } else if (_speed >= 1) {
-            const diff: number = this.speed * this.defaults.inertiaTime; // 滑行 150ms,这里直接影响“灵敏度”
+            const diff = this.speed * this.defaults.inertiaTime; // 滑行 150ms,这里直接影响“灵敏度”
             this.stop(diff);
         } else {
             this.stop(0);
@@ -136,7 +136,7 @@ export class WeUIPickerGroup implements OnInit {
     init(): void {
         let index = 0;
         if (this.value) { // 有传入value，则按value找可匹配的选项
-            const len: number = this.options && this.options.length || 0;
+            const len = this.options && this.options.length || 0;
             for (; index < len; index++) {
                 const option = this.options[index];
                 if (this.value === option.value || this.value['value'] === option.value) {
@@ -160,12 +160,12 @@ export class WeUIPickerGroup implements OnInit {
      * @param diff 惯性滑动的距离
      */
     stop(diff: number): void {
-        let dist: number = this.distance + diff;
+        let dist = this.distance + diff;
 
         // 移动到最接近的那一行
         dist = Math.round(dist / this.defaults.rowHeight) * this.defaults.rowHeight;
-        const max: number = this._getMax(this.defaults.offset, this.defaults.rowHeight);
-        const min: number = this._getMin(this.defaults.offset, this.defaults.rowHeight, this.options.length);
+        const max = this._getMax(this.defaults.offset, this.defaults.rowHeight);
+        const min = this._getMin(this.defaults.offset, this.defaults.rowHeight, this.options.length);
         // console.log(`移动距离: dist=${dist}px`);
 
         // 不要超过最大值或者最小值

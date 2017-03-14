@@ -98,8 +98,13 @@ export class WeUIPicker {
      * 已显示否
      * @internal
      */
-    public shown: boolean = false;
-    private hidden: boolean = true;
+    public shown = false;
+
+    /**
+     * 已显示否
+     * @internal
+     */
+    private hidden = true;
 
 
     constructor() {

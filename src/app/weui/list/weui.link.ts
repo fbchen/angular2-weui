@@ -31,7 +31,7 @@ export class WeUILink {
     /**
      * 不显示最右边的箭头。默认为false，即：显示箭头。
      */
-    @Input() noPushArrow: boolean = false;
+    @Input() noPushArrow = false;
 
     /**
      * 样式

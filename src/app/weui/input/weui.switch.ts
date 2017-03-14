@@ -26,7 +26,7 @@ const WEUI_FORM_CONTROL_VALUE_ACCESSOR: any = {
 export class WeUISwitch extends WeUIFormControl {
 
     /** @internal */
-    checked: boolean = false;
+    checked = false;
 
     /**
      * The value of the input ngModel

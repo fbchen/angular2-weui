@@ -31,7 +31,7 @@ export class WeUIDialog {
     /**
      * ActionSheet弹出模式，取值：ios(Ios模式) - 从底部上弹，md(Android模式) - 弹出在窗口中间。默认为ios。
      */
-    @Input() mode: string = 'ios';
+    @Input() mode = 'ios';
 
     /**
      * 标题
@@ -56,7 +56,7 @@ export class WeUIDialog {
     /**
      * 是否显示“取消”按钮
      */
-    @Input() showNOButton: boolean = true;
+    @Input() showNOButton = true;
 
     /**
      * 用于控制动画的触发(trigger)
@@ -69,7 +69,7 @@ export class WeUIDialog {
      * 已显示否
      * @internal
      */
-    private shown: boolean = false;
+    private shown = false;
 
     /* @internal */
     private resolve: (value?: any) => void;

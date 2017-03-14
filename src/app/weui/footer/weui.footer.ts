@@ -21,12 +21,12 @@ export class WeUIFooter {
     /**
      * 固定在底部
      */
-    @Input() fixedAtBottom: boolean = false;
+    @Input() fixedAtBottom = false;
 
     /**
      * 基本样式
      */
-    @HostBinding('class') cls: string = 'weui-footer';
+    @HostBinding('class') cls = 'weui-footer';
 
     /**
      * 固定在底部样式

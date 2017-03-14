@@ -28,7 +28,7 @@ export class WeUISearchBar implements OnInit {
     /**
      * 是否必填
      */
-    @Input() required: boolean = true;
+    @Input() required = true;
 
     /**
      * @i18n
@@ -49,7 +49,7 @@ export class WeUISearchBar implements OnInit {
     // 输入控件
     @ViewChild('searchBox') searchBox: ElementRef;
 
-    public focusing: boolean = false;
+    public focusing = false;
 
     public value: string = '';
 

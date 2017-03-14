@@ -32,22 +32,22 @@ export class WeUISlider extends DefaultValueAccessor {
     /**
      * 显示值（在最后）
      */
-    @Input() showValue: boolean = true;
+    @Input() showValue = true;
 
     /**
      * 禁用样式
      */
-    @Input() disabled: boolean = false;
+    @Input() disabled = false;
 
     /**
      * 最小值
      */
-    @Input() min: number = 0;
+    @Input() min = 0;
 
     /**
      * 最大值
      */
-    @Input() max: number = 100;
+    @Input() max = 100;
 
     // 内部组件
     @ViewChild('sliderInner') sliderInner: ElementRef;
@@ -55,12 +55,12 @@ export class WeUISlider extends DefaultValueAccessor {
     /**
      * 取值
      */
-    private value: number = 0;
+    private value = 0;
 
     /**
      * 滑动比例（取值：0-100）
      */
-    public percent: number = 0;
+    public percent = 0;
 
     private totalLen: number; // 滑条总长度
     private start: number; // 起始位置
@@ -86,8 +86,8 @@ export class WeUISlider extends DefaultValueAccessor {
             return;
         }
 
-        const dist: number = event.targetTouches[0].clientX - this.startX;
-        let end: number = this.start + dist;
+        const dist = event.targetTouches[0].clientX - this.startX;
+        let end = this.start + dist;
         end = end < 0 ? 0 : end > this.totalLen ? this.totalLen : end;
         this.percent = end * 100 / this.totalLen;
         this.value = Math.round(this.min + (this.max - this.min) * this.percent / 100);

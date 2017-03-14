@@ -18,12 +18,12 @@ export class WeUINavBar implements AfterViewInit {
     /**
      * 初始激活的子对象
      */
-    @Input() activeIndex: number = 0;
+    @Input() activeIndex = 0;
 
     /**
      * 设置基本样式
      */
-    @HostBinding('class.weui-navbar') barCls: boolean = true;
+    @HostBinding('class.weui-navbar') barCls = true;
 
     /** @internal */
     @ContentChildren(WeUINavBarItem) items: QueryList<WeUINavBarItem>;

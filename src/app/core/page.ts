@@ -17,31 +17,31 @@ export class Page {
     /**
      * 当前页码，基于1
      */
-    pageNo: number = 1;
+    pageNo = 1;
 
     /**
      * 每页最多显示记录数
      */
-    pageSize: number = 10;
+    pageSize = 10;
 
     /**
      * 总页数
      */
-    pageCount: number = 0;
+    pageCount = 0;
 
     /**
      * 总记录
      */
-    totalCount: number = 0;
+    totalCount = 0;
 
     /**
      * 当前页的记录数
      */
-    recordCount: number = 0;
+    recordCount = 0;
 
     /**
      * 当前页的开始记录位置，如：1
      */
-    recordStart: number = 1;
+    recordStart = 1;
 
 }

@@ -33,7 +33,7 @@ export class WeUITopTips {
      * 已显示否
      * @internal
      */
-    private shown: boolean = false;
+    private shown = false;
 
     constructor() {
 

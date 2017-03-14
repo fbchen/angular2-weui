@@ -38,12 +38,12 @@ export class WeUIToast implements OnChanges {
     /**
      * 状态：正在加载
      */
-    @Input() loading: boolean = false;
+    @Input() loading = false;
 
     /**
      * 状态：操作成功
      */
-    @Input() success: boolean = true;
+    @Input() success = true;
 
     /**
      * 样式控制
@@ -56,7 +56,7 @@ export class WeUIToast implements OnChanges {
      * 已显示否
      * @internal
      */
-    private shown: boolean = false;
+    private shown = false;
 
     constructor() {
 

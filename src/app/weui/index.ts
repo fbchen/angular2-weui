@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 /** Import WeUI Components */
-import { WeUIFormControl } from './input/weui.form.control';
+// import { WeUIFormControl } from './input/weui.form.control';
 import { WeUIBadge } from './badge/weui.badge';
 import { WeUIButton } from './button/weui.button';
 import { WeUICheckbox } from './input/weui.checkbox';
@@ -79,7 +79,7 @@ export { WeUITabBar } from './tabbar/weui.tabbar';
 export { WeUITabBarItem } from './tabbar/weui.tabbar.item';
 export { WeUITips } from './list/weui.tips';
 export { WeUITitle } from './list/weui.title';
-export { WeUIUploader } from './uploader/weui.uploader';
+export { WeUIUploader, WeUIFile } from './uploader/weui.uploader';
 export { WeUIActionSheet } from './actionsheet/weui.actionsheet';
 export { WeUIDialog } from './dialog/weui.dialog';
 export { WeUIToast } from './toast/weui.toast';
@@ -98,7 +98,6 @@ export { WeUITopTips } from './toptips/weui.toptip';
         FormsModule
     ],
     declarations: [
-        WeUIFormControl,
         WeUIButton,
         WeUIInput,
         WeUIRadio,

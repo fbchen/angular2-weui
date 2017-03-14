@@ -23,7 +23,7 @@ export class WeUIGallery {
     /**
      * 是否显示删除按钮
      */
-    @Input() canDelete: boolean = true;
+    @Input() canDelete = true;
 
     /**
      * 删除事件
@@ -33,8 +33,8 @@ export class WeUIGallery {
     /**
      * 已显示否
      */
-    public shown: boolean = false; // (显示时，先_show，然后才shown)
-    public _show: boolean = false; // 解决transition动画与display冲突的问题
+    public shown = false; // (显示时，先_show，然后才shown)
+    public _show = false; // 解决transition动画与display冲突的问题
 
     constructor() {
 

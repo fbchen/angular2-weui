@@ -25,7 +25,7 @@ export class ProgressExamplePage extends AbstractPage {
         value4: 70
     };
 
-    private uploading: boolean = false;
+    private uploading = false;
 
     constructor(
         public element: ElementRef,

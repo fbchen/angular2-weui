@@ -43,7 +43,7 @@ export class ToResultOperator<T, R> implements Operator<T, R> {
  * @extends {Ignored}
  */
 class ToResultSubscriber<T, R> extends Subscriber<T> {
-    count: number = 0;
+    public count = 0;
     private thisArg: any;
 
     constructor(destination: Subscriber<R>, thisArg: any) {

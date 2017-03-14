@@ -33,12 +33,12 @@ export class WeUIProgressBar {
     /**
      * Value of the progressbar. Defaults to zero.
      */
-    @Input() value: number = 0;
+    @Input() value = 0;
 
     /**
      * 是否可终止 (若为true，则显示关闭按钮)
      */
-    @Input() canTerminate: boolean = true;
+    @Input() canTerminate = true;
 
     /**
      * 终止事件

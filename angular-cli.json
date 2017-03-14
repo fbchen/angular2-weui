@@ -19,7 +19,7 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "styles.scss" // "app/weui/weui.scss"
+        "styles.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
@@ -27,6 +27,12 @@
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
       }
+    }
+  ],
+  "lint": [
+    {
+        "files": "src/**/*.ts",
+        "project": "src/tsconfig.json"
     }
   ],
   "addons": [],
@@ -52,7 +58,7 @@
       "class": false,
       "component": true,
       "directive": true,
-      "module": false,
+      "module": true,
       "pipe": true,
       "service": true
     }

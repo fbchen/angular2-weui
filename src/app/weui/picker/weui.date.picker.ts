@@ -87,7 +87,7 @@ export class WeUIDatePicker extends WeUIPicker implements OnInit, AfterViewInit 
      * cron 表达式，三位，分别是 dayOfMonth[1-31]，month[1-12] 和 dayOfWeek[0-6]（周日-周六）。<br>
      * 格式: 日期 月份 周。例如：* * * 或 1,2,5-9 1-6 0-6 或 1/2 * * 等。默认：* * *。
      */
-    @Input() cron: string = '* * *';
+    @Input() cron = '* * *';
 
     /**
      * 开始日期/年份。取值：<ul>

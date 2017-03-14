@@ -12,8 +12,7 @@ import { DefaultValueAccessor } from '@angular/forms';
 /**
  * 输入类表单控件
  */
-// AOT编译时提示 Cannot determine the module for class WeUIFormControl in **.ts, so comment out `abstract`
-export /*abstract*/ class WeUIFormControl extends DefaultValueAccessor {
+export abstract class WeUIFormControl extends DefaultValueAccessor {
     /** @internal */
     public static count = 0;
 
@@ -35,7 +34,7 @@ export /*abstract*/ class WeUIFormControl extends DefaultValueAccessor {
     /**
      * 是否禁用
      */
-    @Input() disabled: boolean = false;
+    @Input() disabled = false;
 
     /**
      * 额外样式

@@ -99,8 +99,8 @@
       "check-type"
     ],
 
-    "directive-selector": [true, "attribute", "app|weui", "camelCase"],
-    "component-selector": [true, "element", "app|weui", "kebab-case"],
+    "directive-selector": [true, "attribute", "", "camelCase"],
+    "component-selector": [true, "element", "", "kebab-case"],
     "use-input-property-decorator": true,
     "use-output-property-decorator": true,
     "use-host-property-decorator": true,
@@ -108,8 +108,8 @@
     "no-output-rename": true,
     "use-life-cycle-interface": true,
     "use-pipe-transform-interface": true,
-    "component-class-suffix": true,
-    "directive-class-suffix": true,
+    "component-class-suffix": false,
+    "directive-class-suffix": false,
     "no-access-missing-member": true,
     "templates-use-public": true,
     "invoke-injectable": true
