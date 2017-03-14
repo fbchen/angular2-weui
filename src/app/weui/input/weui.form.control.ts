@@ -6,7 +6,7 @@
  * found in the LICENSE file.
  */
 
-import { HostBinding, Input, Renderer, ElementRef } from '@angular/core';
+import { HostBinding, Input, Renderer, ElementRef, Inject } from '@angular/core';
 import { DefaultValueAccessor } from '@angular/forms';
 
 /**
@@ -101,7 +101,7 @@ export /*abstract*/ class WeUIFormControl extends DefaultValueAccessor {
         return 'weui-cell weui-control';
     }
 
-    constructor(private __renderer: Renderer, private __elementRef: ElementRef) {
+    constructor( @Inject(ElementRef) __renderer, @Inject(Renderer) __elementRef) {
         super(__renderer, __elementRef);
         this.id = WeUIFormControl.registerControl();
     }
