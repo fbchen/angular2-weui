@@ -19,7 +19,7 @@ export class SearchBarExamplePage extends AbstractPage implements OnInit {
 
     private list: any[];
 
-    private value: string = '';
+    private value = '';
 
     public get showResult(): boolean {
         return this.value.length > 0;
