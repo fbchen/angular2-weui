@@ -6,7 +6,7 @@
  * found in the LICENSE file.
  */
 
-import { HostBinding, Input, Renderer, ElementRef, Inject } from '@angular/core';
+import { Input, Renderer, ElementRef, Inject } from '@angular/core';
 import { DefaultValueAccessor } from '@angular/forms';
 
 /**
