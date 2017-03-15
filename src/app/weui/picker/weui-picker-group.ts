@@ -18,7 +18,17 @@ const getWindowHeight = (): number => {
 
 @Component({
     selector: 'weui-picker-group',
-    templateUrl: 'weui.picker.group.html'
+    template: `
+        <div class="weui-picker__mask"></div>
+        <div class="weui-picker__indicator"></div>
+        <div class="weui-picker__content" [ngStyle]="{
+                '-webkit-transform': translate3d, 'transform': translate3d,
+                '-webkit-transition': transition, 'transition': transition
+            }">
+            <div class="weui-picker__item" *ngFor="let option of options"
+                [ngClass]="{'weui-picker__item_disabled': option.disabled}">{{option.label}}</div>
+        </div>
+    `
 })
 export class WeUIPickerGroup implements OnInit {
 

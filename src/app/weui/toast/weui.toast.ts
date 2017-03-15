@@ -13,7 +13,15 @@ import { Component, Input, HostBinding, OnChanges, SimpleChange, SimpleChanges }
  */
 @Component({
     selector: 'weui-toast',
-    templateUrl: 'weui.toast.html'
+    template: `
+        <div class="weui-mask_transparent"></div>
+        <div class="weui-toast">
+            <i class="weui-icon-success-no-circle weui-icon_toast" *ngIf="success"></i>
+            <p class="weui-toast__content" *ngIf="success">{{ content || defaults.successText}}</p>
+            <i class="weui-loading weui-icon_toast" *ngIf="loading"></i>
+            <p class="weui-toast__content" *ngIf="loading">{{ content || defaults.loadingText}}</p>
+        </div>
+    `
 })
 export class WeUIToast implements OnChanges {
 

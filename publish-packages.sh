@@ -16,10 +16,11 @@ fi
 
 PACKAGE="angular-weui"
 SRCDIR="./src/app/weui"
-DESTDIR=./dist/packages-dist/${PACKAGE}
+DESTDIR=./dist/${PACKAGE}
 
 cp ${SRCDIR}/package.json  ${DESTDIR}/
 cp ./README.md             ${DESTDIR}/
+cp -rf ${SRCDIR}/css       ${DESTDIR}/
 
 (
     echo "======   Updating to VERSION: ${VERSION}"

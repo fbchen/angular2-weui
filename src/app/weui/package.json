@@ -10,8 +10,9 @@
     "type": "git",
     "url": "https://github.com/fbchen/angular2-weui.git"
   },
-  "main": "umd/index.js",
+  "main": "bundles/angular-weui.umd.js",
   "module": "index.js",
+  "typings": "index.d.ts",
   "peerDependencies": {
     "@angular/common": "^2.4.9",
     "@angular/compiler": "^2.4.9",

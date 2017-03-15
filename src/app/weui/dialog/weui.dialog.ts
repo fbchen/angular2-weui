@@ -11,7 +11,19 @@ import { animate, state, style, transition, trigger } from '@angular/core';
 
 @Component({
     selector: 'weui-dialog',
-    templateUrl: 'weui.dialog.html',
+    template: `
+        <div class="weui-mask"></div>
+        <div class="weui-dialog" [ngClass]="{'weui-skin_android': mode == 'md'}">
+            <div class="weui-dialog__hd"><strong class="weui-dialog__title">{{title}}</strong></div>
+            <div class="weui-dialog__bd">{{content}}</div>
+            <div class="weui-dialog__ft">
+                <a href="javascript:;" (click)="negativeClick($event)" *ngIf="showNOButton"
+                    class="weui-dialog__btn weui-dialog__btn_default">{{btnNOText || defaults.btnNOText}}</a>
+                <a href="javascript:;" (click)="positiveClick($event)"
+                    class="weui-dialog__btn weui-dialog__btn_primary">{{btnOKText || defaults.btnOKText}}</a>
+            </div>
+        </div>
+    `,
     animations: [trigger('visibility', [
         state('show', style({ opacity: 1, display: 'block' })),
         state('hide', style({ opacity: 0, display: 'none' })),

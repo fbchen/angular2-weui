@@ -21,7 +21,19 @@ const WEUI_FORM_CONTROL_VALUE_ACCESSOR: any = {
 @Component({
     selector: 'weui-radio',
     providers: [WEUI_FORM_CONTROL_VALUE_ACCESSOR],
-    templateUrl: 'weui.radio.html'
+    template: `
+        <label class="weui-check__label" [for]="id" (click)="onTouched()">
+            <div class="weui-cell__bd">
+                {{label}}<ng-content></ng-content>
+            </div>
+            <div class="weui-cell__ft">
+                <input type="radio" class="weui-check"
+                    [attr.id]="id" [attr.name]="name" [value]="value"
+                    [disabled]="disabled" [(ngModel)]="innerValue">
+                <span class="weui-icon-checked"></span>
+            </div>
+        </label>
+    `
 })
 export class WeUIRadio extends WeUIFormControl {
 

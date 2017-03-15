@@ -1,6 +1,6 @@
 {
   "name": "angular-weui",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "license": "MIT",
   "author": "32674406@qq.com",
   "angular-cli": {},
@@ -12,7 +12,14 @@
     "test": "ng test",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
     "e2e": "protractor",
-    "lite": "lite-server"
+    "lite": "lite-server",
+    "angular-weui-1": "======= angular-weui 打包脚本，调用: npm run weui:build ======",
+    "weui:transpile": "ngc -p src/app/weui/tsconfig-aot.json",
+    "weui:package": "rollup -c rollup.config.js",
+    "weui:minify": "uglifyjs dist/angular-weui/bundles/angular-weui.umd.js --screw-ie8 --compress --mangle --comments --output dist/angular-weui/bundles/angular-weui.umd.min.js",
+    "weui:sass": "",
+    "weui:build": "npm run weui:transpile && npm run weui:package && npm run weui:minify",
+    "angular-weui-2": "======= angular-weui 打包脚本，调用: npm run weui:build ======"
   },
   "private": false,
   "dependencies": {
@@ -34,8 +41,9 @@
   },
   "devDependencies": {
     "@angular/cli": "latest",
-    "@types/jasmine": "2.5.38",
-    "@types/node": "^6.0.42",
+    "@angular/compiler-cli": "^2.4.9",
+    "@types/jasmine": "2.5.45",
+    "@types/node": "^7.0.8",
     "codelyzer": "^2.0.0",
     "concurrently": "^3.4.0",
     "jasmine-core": "2.5.2",
@@ -47,8 +55,13 @@
     "karma-remap-istanbul": "^0.2.1",
     "lite-server": "^2.3.0",
     "protractor": "~4.0.13",
+    "rollup": "^0.41.5",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-uglify": "^1.0.1",
     "ts-node": "2.1.0",
     "tslint": "^4.5.0",
-    "typescript": "~2.0.3"
+    "typescript": "^2.2.1",
+    "uglify-js": "^2.8.12"
   }
 }

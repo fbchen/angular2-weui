@@ -20,7 +20,18 @@ const WEUI_FORM_CONTROL_VALUE_ACCESSOR: any = {
 
 @Component({
     selector: 'weui-switch',
-    templateUrl: 'weui.switch.html',
+    template: `
+        <div class="weui-cell__bd">
+            {{label}}<ng-content select="label"></ng-content>
+        </div>
+        <div class="weui-cell__ft">
+            <label [for]="id" class="weui-switch-cp">
+                <input type="checkbox" class="weui-switch-cp__input"
+                    [attr.id]="id" [attr.name]="name" [value]="value" [checked]="checked" [(ngModel)]="innerValue" />
+                <div class="weui-switch-cp__box"></div>
+            </label>
+        </div>
+    `,
     providers: [WEUI_FORM_CONTROL_VALUE_ACCESSOR]
 })
 export class WeUISwitch extends WeUIFormControl {

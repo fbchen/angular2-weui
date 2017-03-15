@@ -21,7 +21,19 @@ const WEUI_FORM_CONTROL_VALUE_ACCESSOR: any = {
 @Component({
     selector: 'weui-checkbox',
     providers: [WEUI_FORM_CONTROL_VALUE_ACCESSOR],
-    templateUrl: 'weui.checkbox.html'
+    template: `
+        <label class="weui-check__label" [for]="id" (click)="onTouched()">
+            <div class="weui-cell__hd">
+                <input type="checkbox" class="weui-check"
+                    [attr.id]="id" [attr.name]="name" [value]="value"
+                    [checked]="checked" [(ngModel)]="innerValue">
+                <i class="weui-icon-checked"></i>
+            </div>
+            <div class="weui-cell__bd">
+                {{label}}<ng-content></ng-content>
+            </div>
+        </label>
+    `
 })
 export class WeUICheckbox extends WeUIFormControl {
 

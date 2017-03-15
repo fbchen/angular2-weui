@@ -10,7 +10,18 @@ import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'weui-button',
-    templateUrl: 'weui.button.html'
+    template: `
+        <a href="javascript:;" class="weui-btn {{getColorStyle()}}"
+            [ngClass]="{
+                'weui-btn_disabled': disabled && plain == undefined,
+                'weui-btn_plain-disabled': disabled && plain !== undefined,
+                'weui-btn_loading': loading,
+                'weui-btn_mini': mini !== undefined
+            }">
+            <i class="weui-loading" *ngIf="loading"></i>
+            <ng-content></ng-content>
+        </a>
+    `
 })
 export class WeUIButton {
 

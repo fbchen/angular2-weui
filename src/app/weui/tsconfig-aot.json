@@ -7,6 +7,7 @@
     "emitDecoratorMetadata": true,
     "strictNullChecks": false,
     "noImplicitAny": true,
+    "target": "es5",
     "module": "es2015",
     "moduleResolution": "node",
     "outDir": "../../../dist/angular-weui",
@@ -17,10 +18,9 @@
     "rootDir": ".",
     "sourceMap": true,
     "inlineSources": true,
-    "target": "es5",
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
-    "lib": ["es2015", "dom", "es2015.promise"],
+    "lib": ["es2015", "dom"],
     "typeRoots": [
         "../../../node_modules/@types/"
     ]
@@ -30,9 +30,7 @@
     "../../../node_modules/zone.js/dist/zone.js.d.ts"
   ],
   "angularCompilerOptions": {
-    "annotateForClosureCompiler": true,
-    "strictMetadataEmit": true,
-    "flatModuleOutFile": "index.js",
-    "flatModuleId": "angular-weui"
+    "skipMetadataEmit" : false,
+    "skipTemplateCodegen": true
   }
 }

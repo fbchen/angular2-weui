@@ -11,7 +11,16 @@ import { WeUIFile } from '../uploader/weui.uploader';
 
 @Component({
     selector: 'weui-gallery',
-    templateUrl: 'weui.gallery.html'
+    template: `
+        <div class="weui-gallery weui-transition-opacity" [ngClass]="{'weui-block': _show, 'weui-fadeIn': shown}">
+            <span class="weui-gallery__img" [style.background-image]="image?.fileURL"></span>
+            <div class="weui-gallery__opr" *ngIf="canDelete">
+                <a href="javascript:;" class="weui-gallery__del" (click)="deleteImage($event)">
+                    <i class="weui-icon-delete weui-icon_gallery-delete"></i>
+                </a>
+            </div>
+        </div>
+    `
 })
 export class WeUIGallery {
 

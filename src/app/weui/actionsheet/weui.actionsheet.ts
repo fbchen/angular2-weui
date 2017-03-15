@@ -11,7 +11,18 @@ import { animate, state, style, transition, trigger } from '@angular/core';
 
 @Component({
     selector: 'weui-actionsheet',
-    templateUrl: 'weui.actionsheet.html',
+    template: `
+        <div class="weui-mask" [@visibility]="visibility" (click)="hide()"></div>
+        <div class="weui-actionsheet"
+            [ngClass]="{'weui-actionsheet_toggle': shown && mode == 'ios'}">
+            <div class="weui-actionsheet__menu">
+                <div class="weui-actionsheet__cell" *ngFor="let m of menu" (click)="onSelect(m)">{{m.text}}</div>
+            </div>
+            <div class="weui-actionsheet__action" *ngIf="mode == 'ios'">
+                <div class="weui-actionsheet__cell" (click)="hide()">{{cancelText}}</div>
+            </div>
+        </div>
+    `,
     animations: [trigger('visibility', [
         state('show', style({ opacity: 1 })),
         state('hide', style({ opacity: 0 })),

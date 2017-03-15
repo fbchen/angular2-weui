@@ -18,7 +18,20 @@ const WEUI_FORM_CONTROL_VALUE_ACCESSOR: any = {
 
 @Component({
     selector: 'weui-slider',
-    templateUrl: 'weui.slider.html',
+    template: `
+        <div class="weui-slider-box weui-slider_{{color}}">
+            <ng-content select="[weui-start]"></ng-content>
+            <div class="weui-slider">
+                <div #sliderInner class="weui-slider__inner">
+                    <div [style.width]="percent + '%'" class="weui-slider__track"></div>
+                    <div [style.left]="percent + '%'" class="weui-slider__handler"
+                        (touchstart)="onTouchStart($event)" (touchmove)="onTouchMove($event)"></div>
+                </div>
+            </div>
+            <ng-content select="[weui-last]"></ng-content>
+            <div class="weui-slider-box__value" *ngIf="showValue">{{value}}</div>
+        </div>
+    `,
     providers: [WEUI_FORM_CONTROL_VALUE_ACCESSOR]
 })
 export class WeUISlider extends DefaultValueAccessor {

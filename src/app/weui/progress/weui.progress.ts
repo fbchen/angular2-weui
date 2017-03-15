@@ -10,7 +10,16 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'weui-progress-bar',
-    templateUrl: 'weui.progress.html'
+    template: `
+        <div class="weui-progress weui-progress_{{color}}">
+            <div class="weui-progress__bar">
+                <div class="weui-progress__inner-bar" [style.width]="value + '%'"></div>
+            </div>
+            <a href="javascript:;" class="weui-progress__opr" *ngIf="canTerminate" (click)="onTerminate()">
+                <i class="weui-icon-cancel"></i>
+            </a>
+        </div>
+    `
 })
 export class WeUIProgressBar {
 
