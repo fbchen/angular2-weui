@@ -122,9 +122,9 @@ export class WeUIInput extends WeUIFormControl {
     /**
      * 扩展样式，如：weui-cell_example
      */
-    @HostBinding('class') get inputCls(): string {
+    @HostBinding('class') get hostCls(): string {
         const inputClass = (this.baseCls && 'weui-cell_' + this.baseCls) || '';
-        return [this.controlClass, inputClass, (this.additionalCls || '')].join(' ');
+        return [super.getBasicControlCls(), inputClass, (this.additionalCls || '')].join(' ');
     }
 
     /**

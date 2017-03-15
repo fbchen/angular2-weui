@@ -28,8 +28,8 @@ export class WeUIRadio extends WeUIFormControl {
     /**
      * 扩展样式
      */
-    @HostBinding('class') get inputCls(): string {
-        return [WeUIFormControl.getBasicControlCls(), 'weui-check__label', (this.additionalCls || '')].join(' ');
+    @HostBinding('class') get hostCls(): string {
+        return [super.getBasicControlCls(), 'weui-check__label', (this.additionalCls || '')].join(' ');
     }
 
     constructor(private renderer: Renderer, private elementRef: ElementRef) {

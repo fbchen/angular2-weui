@@ -4,8 +4,8 @@
     </div>
     <div class="weui-cell__ft">
         <input type="radio" class="weui-check"
-               [id]="id" [name]="name" [value]="value" [disabled]="disabled"
-               [(ngModel)]="innerValue">
+               [attr.id]="id" [attr.name]="name" [value]="value"
+               [disabled]="disabled" [(ngModel)]="innerValue">
         <span class="weui-icon-checked"></span>
     </div>
 </label>

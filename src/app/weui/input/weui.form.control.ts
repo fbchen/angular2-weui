@@ -6,13 +6,14 @@
  * found in the LICENSE file.
  */
 
-import { HostBinding, Input, Renderer, ElementRef } from '@angular/core';
+import { HostBinding, Input, Renderer, ElementRef, Inject } from '@angular/core';
 import { DefaultValueAccessor } from '@angular/forms';
 
 /**
  * 输入类表单控件
  */
-export abstract class WeUIFormControl extends DefaultValueAccessor {
+// AOT编译时提示 Cannot determine the module for class WeUIFormControl in **.ts, so comment out `abstract`
+export /*abstract*/ class WeUIFormControl extends DefaultValueAccessor {
     /** @internal */
     public static count = 0;
 
@@ -84,23 +85,18 @@ export abstract class WeUIFormControl extends DefaultValueAccessor {
         }
     }
 
-    /**
-     * 设置基本样式
-     */
-    @HostBinding('class') get controlClass() {
-        return WeUIFormControl.getBasicControlCls();
-    }
-
     /** @internal */
     public static registerControl(): string {
         return 'weui-control-' + (++WeUIFormControl.count).toString();
     }
 
-    public static getBasicControlCls(): string {
+    public getBasicControlCls(): string {
         return 'weui-cell weui-control';
     }
 
-    constructor(private __renderer: Renderer, private __elementRef: ElementRef) {
+    constructor(
+        @Inject(Renderer) private __renderer: Renderer,
+        @Inject(ElementRef) private __elementRef: ElementRef) {
         super(__renderer, __elementRef);
         this.id = WeUIFormControl.registerControl();
     }

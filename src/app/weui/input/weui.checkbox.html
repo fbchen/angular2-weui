@@ -1,7 +1,8 @@
 <label class="weui-check__label" [for]="id" (click)="onTouched()">
     <div class="weui-cell__hd">
         <input type="checkbox" class="weui-check"
-               [id]="id" [name]="name" [value]="value" [checked]="checked" [(ngModel)]="innerValue">
+               [attr.id]="id" [attr.name]="name" [value]="value"
+               [checked]="checked" [(ngModel)]="innerValue">
         <i class="weui-icon-checked"></i>
     </div>
     <div class="weui-cell__bd">

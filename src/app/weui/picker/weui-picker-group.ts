@@ -94,7 +94,7 @@ export class WeUIPickerGroup implements OnInit {
         this.endY = event.changedTouches[0].pageY;
 
         // 计算滑动的速度: 距离 / 时间
-        const _distance = this.endY - this.startY;
+        const _distance: number = this.endY - this.startY;
         this.speed = _distance / (endTime - this.startTime);
 
         // 重新设置开始时间、开始位置

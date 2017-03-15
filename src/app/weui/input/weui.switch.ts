@@ -54,8 +54,8 @@ export class WeUISwitch extends WeUIFormControl {
     /**
      * 扩展样式
      */
-    @HostBinding('class') get inputCls(): string {
-        return [this.controlClass, 'weui-cell_switch', (this.additionalCls || '')].join(' ');
+    @HostBinding('class') get hostCls(): string {
+        return [super.getBasicControlCls(), 'weui-cell_switch', (this.additionalCls || '')].join(' ');
     }
 
     constructor(private renderer: Renderer, private elementRef: ElementRef) {

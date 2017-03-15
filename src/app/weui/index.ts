@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 /** Import WeUI Components */
-// import { WeUIFormControl } from './input/weui.form.control';
+import { WeUIFormControl } from './input/weui.form.control';
 import { WeUIBadge } from './badge/weui.badge';
 import { WeUIButton } from './button/weui.button';
 import { WeUICheckbox } from './input/weui.checkbox';
@@ -98,6 +98,7 @@ export { WeUITopTips } from './toptips/weui.toptip';
         FormsModule
     ],
     declarations: [
+        WeUIFormControl,
         WeUIButton,
         WeUIInput,
         WeUIRadio,
